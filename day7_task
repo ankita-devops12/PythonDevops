@@ -1,0 +1,21 @@
+1. What is the problem?
+   I am picking day 5 task. The problem is I have 2 app.log files. I need to count logs in both files without hardcode.
+2. What input does it need?
+   solving this problem I am using class.I need to create object. as an input I am giving log file and json file.
+3. What output should it give?
+   It gives me json file that print log count details.
+4. What steps are involved?
+   i) I have created class :  LogAnalyzer
+   ii) define fuctions
+       def __init__(self,file_name, output_file)- its call automatically when objects are created.
+       def read_logs(self)- reading a log file
+       def write_JSON(self,count) - writing log count in the json file
+     **def analyze(self) - analyze and return count
+       lines=self.read_logs() - directly call the read log using self
+       for line in lines - checking line by line is there INFO, WARNING, ERROR If yes the increment the count
+       self.write_JSON(log_count) - writing the count in json file directly
+   iii) creating a class object and calling them
+        log1=LogAnalyzer("app.log","logfileoutput.json")
+        log_count=log1.analyze()
+
+
